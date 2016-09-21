@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<center>
+	<style>
+    
+	div {
+		font-size: 120%;
+		text-align: left;
+		font-size = 150%;
+		background-color: #F2F2F2;
+		width: 200px;
+		height: 250px;
+		border-style: groove;
+		border-width: 2px;how 
+		border-color: #D2D2D2;
+		padding: 20px;
+		margin: 0px;
+		}
+  </style>
+
+	<script type="text/javascript">
+		
+		var x,y,func,result;
+		
+		function add()
+		{
+			result = x+y;
+		}
+		function subtract()
+		{
+			result = x-y;
+		}
+		function multiply()
+		{
+			result = x*y;
+		}
+		function divide()
+		{
+			result = x/y;
+			
+		}
+		function square()
+		{
+			result = x*x;
+			document.getElementById("R").innerHTML = result;
+		}
+		function sqrt()
+		{
+			result = Math.sqrt(x);
+			document.getElementById("R").innerHTML = result;
+		}
+		function calculateResult()
+		{
+				x = Number(document.getElementById("a").value);
+				y = Number(document.getElementById("b").value);
+				if (func==1)
+				add();
+				else if (func==2)
+				subtract();
+				else if (func==3)
+				multiply();
+				else if (func==4)
+				divide();
+				else if (func==5)
+				square();
+				else if (func==6)
+				sqrt();
+			
+						
+		}
+		function displayResult()
+		{
+			calculateResult();
+			document.getElementById("R").innerHTML = result;
+		}
+		
+	</script>
+</head>
+<body>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	
+	<div>
+		
+		<input id="a" type="number"/></br></br>
+		
+		<input type="button" onclick="func=1" value="+"/>
+		<input type="button" onclick="func=2" value="-"/>
+		<input type="button" onclick="func=3" value="x"/>
+		<input type="button" onclick="func=4" value="/"/>
+		<input type="button" onclick="func=5; calculateResult();" value="^"/>
+		<input type="button" onclick="func=6; calculateResult();" value="Sqrt"/></br></br>
+		<input id="b" type="number"/></br></br>
+		<input type="button" onclick="displayResult()" value="="/>
+		</br><p id="R" font-size=150%></p>
+		
+		
+	</div>
+	<p1> e-Centric Calculator</>
+</body>
+
+</html>
