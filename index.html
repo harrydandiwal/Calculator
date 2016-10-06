@@ -1,0 +1,57 @@
+<html ng-app = "calculator">
+
+	<head>
+	<title> e-Centric Calculator</title>
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
+	<script src='app.js'></script>
+	<center>
+	<style>
+    
+	div {
+		font-size: 120%;
+		text-align: left;
+		font-size = 150%;
+		background-color: #F2F2F2;
+		width: 200px;
+		height: 250px;
+		border-style: groove;
+		border-width: 2px;how 
+		border-color: #D2D2D2;
+		padding: 20px;
+		margin: 0px;
+		}
+	</style>
+	
+	</head>
+	
+	<body>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<div ng-controller = "calculatorCtrl as ctrl">
+		</br>
+		<input type="number" ng-model="ctrl.a"/></br>
+		<span ng-bind="ctrl.operation"></span></br>
+		<input type="number" ng-model="ctrl.b"/></br></br>
+		<input type="button"value="+" ng-click="ctrl.clickoperation('+')"/>
+		<input type="button"value="-" ng-click="ctrl.clickoperation('-')"/>
+		<input type="button"value="x" ng-click="ctrl.clickoperation('x')"/>
+		<input type="button"value="/" ng-click="ctrl.clickoperation('/')"/>
+		<input type="button"value="^" ng-click="ctrl.clickoperation('^')"/>
+		<input type="button"value="Sqrt" ng-click="ctrl.clickoperation('Sqrt')"/></br></br>
+		
+		<input type="button"  value="=" ng-click="ctrl.calculateResult();"/>
+		<p ng-bind="ctrl.result"></p>
+		
+	</div>	
+	<p1> e-Centric Calculator</>
+	
+	
+	
+	
+	
+	</body>
+
+
+</html>
